@@ -6,19 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        for (int x = 0; x < 5; x++) {
+        int dogCount = 1;
+        System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
 
-            double num = Random();
-            int num1;
-            if (num > 0.5) {
-                num1 = 1;
-            } else {
-                num1 = 0;
-            }
+        int catCount = 2;
+        System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
 
-
-            System.out.println("I own " + num1 + " " + pluralize("dog", num1) + ".");
-        }
+        int turtleCount = 0;
+        System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
 
         flipNHeads(2);
@@ -29,42 +24,43 @@ public class Main {
 
 
 
-    public static String pluralize(String word, int number) {
-        if (number == 0 || number > 1) {
-            return word + 's';
+    public static String pluralize(String animalName, int num) {
+        if ( num > 1 ||  num == 0) {
+            return animalName + 's';
         } else {
-            if (number == 1) {
-                return word;
+            if (num == 1) {
+                return animalName;
             }
         }
-        return word;
+        return animalName;
     }
 
 
-
+//from w3school https://www.w3schools.com/java/java_math.asp
     public static double Random () {
         return Math.random();
     }
 
-    public static void flipNHeads (int n){
-        int headsInARow=0;
+    public static void flipNHeads (int number){
+        int headsNumber=0;
         int counter=0;
-        while(n!=headsInARow){
+        while(number!=headsNumber){
             double randomFlips = Random();
             if(randomFlips>=0.5){
                 System.out.println("heads");
-                headsInARow++;
+                headsNumber++;
             } else {
                 System.out.println("tails");
-                headsInARow=0;
+                headsNumber=0;
             }
             counter++;
         }
-        System.out.println("It took " + counter + " flips to flip " + n + " heads in a row.");
+        System.out.println("It took " + counter + " flips to flip " + number + " heads in a row.");
 
     }
 
-
+// get helped from https://www.geeksforgeeks.org/ to under stand the logic for the code
+// https://www.geeksforgeeks.org/localdatetime-now-method-in-java-with-examples/
     public static void clock() {
         LocalDateTime now = LocalDateTime.now();
 
