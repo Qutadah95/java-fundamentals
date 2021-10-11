@@ -1,9 +1,7 @@
-# test014
 
+## Table Of Content : 
 
-
-Random 
-
-clock
-
-pluralize
+| Directory  | Link                                 |
+|------------|--------------------------------------|
+|basics      | [LINK](basic/basic.md)             |
+|basiclibrary| [LINK](basiclibrary/basiclibrary.md) |
