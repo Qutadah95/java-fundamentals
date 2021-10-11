@@ -3,5 +3,5 @@
 
 | Directory  | Link                                 |
 |------------|--------------------------------------|
-|basics      | [LINK](basic/basic.md)             |
+|basic      | [LINK](basic/basic.md)             |
 |basiclibrary| [LINK](basiclibrary/basiclibrary.md) |
