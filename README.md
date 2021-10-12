@@ -1,7 +1,11 @@
 
 ## Table Of Content : 
 
+
+
+## Table Of Content : 
+
 | Directory  | Link                                 |
 |------------|--------------------------------------|
-|basic      | [LINK](basic/basic.md)             |
+|basics      | [LINK](basic/basic.md)             |
 |basiclibrary| [LINK](basiclibrary/basiclibrary.md) |
