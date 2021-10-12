@@ -8,4 +8,6 @@
 
 3)calculatingAverages():calculate an average for a array
         
+
 4) arrayOfArrays() :   turn an array of array into a normal array contain the average of each array then find the lowes avarge.
+
