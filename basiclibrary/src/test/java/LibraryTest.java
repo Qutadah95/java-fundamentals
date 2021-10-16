@@ -3,11 +3,21 @@
  */
 import org.junit.Test;
 import static org.junit.Assert.*;
-/*
+
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    @Test
+    public void testDublicatFunction() {
+        int[] dublicatArray = {1, 2, 3, 4, 1};
+        int[] withOutDublicatArray = {1, 2, 3, 4, 5};
+        int[] emptyArray = {};
+        assertTrue("test dublicat value for an array", Library.containsDuplicates(dublicatArray));
+        assertFalse("test with out dublicat value for an array", Library.containsDuplicates(withOutDublicatArray));
+        assertFalse("the array is empty", Library.containsDuplicates(emptyArray));
+    }
+
+    @Test
+    public void testArrayofArray() {
+        int[][] array = {{1, 2, 3, 4, 5, 6}, {1, 2, 5, 6}, {1, 2, 35, 6}, {1, 2, 3, 4,}};
+        assertEquals("arrayOfArray", array[2], Library.arrayOfArrays(array));
     }
 }
-*/
