@@ -33,7 +33,7 @@ class AppTest {
                 " Missing semicolon" +"Line"+98+": Missing semicolon" +"Line"+99+": Missing semicolon" +"Line"+100+":" +
                 " Missing semicolon" +"Line"+101+": Missing semicolon";
 
-        assertEquals(resultOutput,App.ReadFileScanerLinter(test1));
+        assertEquals(resultOutput,App.ReadFile(test1));
 
 
     }
