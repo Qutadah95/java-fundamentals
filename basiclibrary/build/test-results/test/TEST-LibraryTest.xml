@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-16T15:09:53" hostname="LTUCSTDTV-L197" time="0.004">
+  <properties/>
+  <testcase name="testTally_OneWinner" classname="LibraryTest" time="0.004"/>
+  <system-out><![CDATA[[Bush, Bush, Bush, Shrub, Hedge, Shrub, Bush, Hedge, Bush]
+Bush
+0
+Bush
+1
+Bush
+2
+Shrub
+0
+Hedge
+0
+Shrub
+1
+Bush
+2
+Hedge
+3
+Bush
+4
+[Hedge, Bush, Shrub]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
