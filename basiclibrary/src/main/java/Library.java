@@ -18,18 +18,18 @@ int[]testArray={1,1};
                 {65, 56, 55, 52, 55, 62, 57}
         };
         arrayOfArrays(weeklyMonthTemperatures);
-//        arrayOfweather(weeklyMonthTemperatures);
-//        List<String> votes = new ArrayList<>();
-//        votes.add("Bush");
-//        votes.add("Bush");
-//        votes.add("Bush");
-//        votes.add("Shrub");
-//        votes.add("Hedge");
-//        votes.add("Shrub");
-//        votes.add("Bush");
-//        votes.add("Hedge");
-//        votes.add("Bush");
-//        tally(votes);
+        arrayOfweather(weeklyMonthTemperatures);
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        tally(votes);
     }
 
 
@@ -83,69 +83,83 @@ int[]testArray={1,1};
     public static int[] arrayOfArrays(int[][] array) {
         System.out.println("--------------------");
         System.out.print(" arrayOfArrays Function \n\n");
-        ArrayList<Double> arrayOfAvgs = new ArrayList<>();
+        ArrayList<Double> arrayOfAvg = new ArrayList<>();
 
         for (int i = 0; i < array.length; i++) {
             double sum = 0;
             for (int j = 0; j < array[i].length; j++) {
                 sum += array[i][j];
             }
-            arrayOfAvgs.add(sum / array[i].length);
+            arrayOfAvg.add(sum / array[i].length);
         }
-        Collections.sort(arrayOfAvgs);
-        for (int i = 0; i < arrayOfAvgs.size() ; i++) {
-            System.out.println( "the averages is = " + arrayOfAvgs.get(i) );
+        Collections.sort(arrayOfAvg);
+        for (int i = 0; i < arrayOfAvg.size() ; i++) {
+            System.out.println( "the averages is = " + arrayOfAvg.get(i) );
         }
-        System.out.println("\n\n The Lowest Average is: " + arrayOfAvgs.get(0) + "\n\n");
-        System.out.println(arrayOfAvgs);
-        return array[arrayOfAvgs.indexOf(Collections.min(arrayOfAvgs))];
+        System.out.println("\n\n The Lowest Average is: " + arrayOfAvg.get(0) + "\n\n");
+        System.out.println(arrayOfAvg);
+        return array[arrayOfAvg.indexOf(Collections.min(arrayOfAvg))];
 
     }
 
-//    public static void arrayOfweather(int [][] weatherInfo) {
-//        System.out.println("HashSet");
-//
-//        HashSet<Integer> weatherTemprture = new HashSet<Integer>();
-//        for (int i=0; i<weatherInfo.length; i++){
-//            for (int j=0; j<weatherInfo[i].length; j++){
-//                weatherTemprture.add(weatherInfo[i][j]);
-//            }
-//
-//        }
-//
-//        System.out.println(weatherTemprture);
-//        List<Integer> list = new ArrayList<Integer>(weatherTemprture);
-//
-//        Collections.sort(list);
-//        System.out.println(list);
-//
-//        int low = list.get(0);
-//        int high = list.get(17);
-//        System.out.println("high is "+high);
-//        System.out.println("Low is "+low);
-//
-//        for (int i = low; i < high; i++) {
-//            if ( !list.contains(i)) {
-//                System.out.println("Never saw temperature: "+i);
-//            }
-//
-//        }
-//        System.out.println("--------------------");
-//    }
-//    public static void tally(List<String> value) {
-//
-//        System.out.println(value);
-//        Set<String> newValues = new HashSet<String>();
-//        System.out.println(newValues);
-//        for (int i = 0; i < value.size(); i++) {
-//            if (newValues.contains(value.get(i)) == false) {
-//                newValues.add(value.get(i));
-//            }
-//        }
-//        System.out.println(newValues);
-//        for (String i : newValues) {
-//            System.out.println(i +" received the most votes!\n");
-//        }
-//    }
+    public static String arrayOfweather(int [][] arrayOfTemps) {
+        System.out.println("\n analyzingWeatherData Method\n");
+
+
+        Set<Integer> temp = new HashSet<Integer>();
+
+        for (int i = 0; i < arrayOfTemps.length; i++) {
+            for (int j = 0; j < arrayOfTemps[i].length; j++) {
+                temp.add(arrayOfTemps[i][j]);
+            }
+        }
+
+        temp = new TreeSet<>(temp);
+
+
+
+        Integer[] temperaturesAsAnArray = temp.toArray(new Integer[temp.size()]);
+
+        int high = temperaturesAsAnArray[temperaturesAsAnArray.length-1];
+        int low = temperaturesAsAnArray[0];
+
+        System.out.println("\n High: " + high);
+        System.out.println("\n Low: " + low);
+
+        System.out.println("\n");
+
+        String tempsNotShown = "";
+        for (int i = low; i < high; i++) {
+            if(!temp.contains(i)){
+                tempsNotShown = "Never saw temperature: " + i;
+                System.out.println(tempsNotShown);
+            }
+        }
+
+        System.out.println(tempsNotShown+"\n");
+
+        return tempsNotShown;
+    }
+    public static String tally(List<String> votes){
+
+        System.out.println(votes);
+
+        Set<String> repeatedValues = new HashSet<String>();
+        int count = 0;
+        for (int i = 0; i < votes.size(); i++) {
+            System.out.println(votes.get(i));
+            if(repeatedValues.contains(votes.get(i))==true){
+                count++;
+            } else {
+                count = 0;
+                repeatedValues.add(votes.get(i));
+            }
+            System.out.println(count);
+        }
+        System.out.println(repeatedValues);
+        String tallyMost = "received the most votes!  "+repeatedValues;
+        return tallyMost;
+    }
 
 }
+
