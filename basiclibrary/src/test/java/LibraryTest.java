@@ -21,8 +21,8 @@ public class LibraryTest {
 
     @Test
     public void testArrayofArray() {
-        int[][] array = {{1, 2, 3, 4, 5, 6}, {1, 2, 5, 6}, {1, 2, 35, 6}, {1, 2, 3, 4,}};
-        assertEquals("arrayOfArray", array[2], Library.arrayOfArrays(array));
+        int[][] array = {{1, 2, 3, 4, 5, 6}, {1, 2, 5, 6}, {1, 2, 35, 6}, {0}};
+        assertEquals("arrayOfArray", array[0], Library.arrayOfArrays(array));
     }
     @Test
     public void testTally_OneWinner() {
