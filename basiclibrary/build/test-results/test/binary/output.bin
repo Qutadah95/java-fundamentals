@@ -1,20 +1,13 @@
-<[Bush, Bush, Bush, Shrub, Hedge, Shrub, Bush, Hedge, Bush]
-Bush
-0
-Bush
-1
-Bush
-2
-Shrub
-0
-Hedge
-0
-Shrub
-1
-Bush
-2
-Hedge
-3
-Bush
-4
-[Hedge, Bush, Shrub]
+--------------------
+ arrayOfArrays Function 
+
+the averages is = 0.0
+the averages is = 3.5
+the averages is = 3.5
+the averages is = 11.0
+
+
+ The Lowest Average is: 0.0
+
+
+[0.0, 3.5, 3.5, 11.0]
