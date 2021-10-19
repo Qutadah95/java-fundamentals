@@ -6,9 +6,9 @@ public class Library {
         System.out.println("hello");
 
         Restaurant KFC=new Restaurant("KFC",4,7);
-        KFC.setName("KFC");
-        KFC.setNumberOfStares(4);
-        KFC.setPriceCategory(7);
+//        KFC.setName("KFC");
+//        KFC.setNumberOfStares(4);
+//        KFC.setPriceCategory(7);
         KFC.addReview("good",2,"Qutadah");
         System.out.println(KFC);
         System.out.println(KFC.getReviews());
