@@ -1,15 +1,22 @@
+import java.util.ArrayList;
+
 public class Shop {
 
     //name, description, and number of dollar signs
 
     private String name;
-    private String desciption;
+    private String description;
     private String numberOfDollarSigns;
+    private ArrayList<Object> ShopReviews =new ArrayList<Object>();
 
-    public Shop(String name, String desciption, String numberOfDollarSigns) {
+    public Shop(String name, String description, String numberOfDollarSigns) {
         this.name = name;
-        this.desciption = desciption;
+        this.description = description;
         this.numberOfDollarSigns = numberOfDollarSigns;
+    }
+
+    public Shop() {
+
     }
 
     public String getName() {
@@ -20,12 +27,12 @@ public class Shop {
         this.name = name;
     }
 
-    public String getDesciption() {
-        return desciption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getNumberOfDollarSigns() {
@@ -40,9 +47,15 @@ public class Shop {
     public String toString() {
         return "Shop{" +
                 "name='" + name + '\'' +
-                ", desciption='" + desciption + '\'' +
+                ", description='" + description + '\'' +
                 ", numberOfDollarSigns='" + numberOfDollarSigns + '\'' +
                 '}';
+    }
+    public ArrayList<Object> addReview(String name, String description, String numberOfDollarSigns){
+        ShopReviews.add(name);
+        ShopReviews.add(description);
+        ShopReviews.add(numberOfDollarSigns);
+        return ShopReviews;
     }
 
 }

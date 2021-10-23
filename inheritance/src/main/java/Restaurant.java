@@ -16,15 +16,17 @@ public class Restaurant {
         this.priceCategory = priceCategory;
     }
     public ArrayList<Object> addReview(String body, float numberOfStar, String author){
-        Review oneReview=new Review(body,numberOfStar,author);
-//oneReview.setBody(body);
-//oneReview.setAuthor(author);
-//oneReview.setNumberOfStar(numberOfStar);
-        reviews.add(oneReview.getAuthor());
-        reviews.add(oneReview.getBody());
-        String numOfStarsToString=String.valueOf(numberOfStar);
-        reviews.add(numOfStarsToString);
-        reviews.add(oneReview);
+        if (numberOfStar<0 && numberOfStar>5) {
+            System.out.println("you should choose number from 1 to 5 ");
+        }else{
+            Review oneReview=new Review(body,numberOfStar,author);
+            reviews.add(oneReview.getAuthor());
+            reviews.add(oneReview.getBody());
+            String numOfStarsToString=String.valueOf(numberOfStar);
+            reviews.add(numOfStarsToString);
+            reviews.add(oneReview);
+
+        }
         return reviews;
     }
 
