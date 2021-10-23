@@ -4,14 +4,13 @@
 public class Library {
     public static void main(String[] args) {
         System.out.println("hello");
-
         Restaurant KFC=new Restaurant("KFC",4,7);
 //        KFC.setName("KFC");
 //        KFC.setNumberOfStares(4);
 //        KFC.setPriceCategory(7);
         KFC.addReview("good",2,"Qutadah");
         System.out.println(KFC);
-        System.out.println(KFC.getReviews());
+        System.out.println(KFC.addReview("good",2,"Qutadah"));
 
 
 
